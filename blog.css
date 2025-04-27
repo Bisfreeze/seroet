@@ -1,0 +1,464 @@
+.blog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.blog-main {
+    margin-top: 100px;
+    padding: 40px 0;
+}
+
+.blog-banner {
+    width: 100%;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 40px;
+}
+
+.blog-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.blog-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.blog-title h1 {
+    font-family: 'Pacifico', cursive;
+    color: var(--primary-color);
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.blog-intro {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--box-shadow);
+    line-height: 1.8;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.content-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.article-image {
+    flex: 1;
+    display: flex;
+    min-width: 300px;
+}
+
+.article-image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.feature-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.feature-title {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.feature-content {
+    background-color: var(--light-green);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    box-shadow: var(--box-shadow);
+}
+
+.feature-content h3 {
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.feature-content p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.feature-content .read-more {
+    display: inline-block;
+    color: var(--primary-color);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.feature-content .read-more:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* Modal/Popup styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-container {
+    background-color: white;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    border-radius: var(--border-radius);
+    overflow-y: auto;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+}
+
+.modal-overlay.active .modal-container {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    background-color: var(--secondary-color);
+    transform: rotate(90deg);
+}
+
+.modal-header {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.modal-date {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.modal-title {
+    color: var(--secondary-color);
+    font-size: 2rem;
+    line-height: 1.3;
+}
+
+.modal-content {
+    line-height: 1.8;
+}
+
+.modal-content h2 {
+    color: var(--secondary-color);
+    font-size: 1.6rem;
+    margin: 25px 0 15px;
+}
+
+.modal-content h3 {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    margin: 20px 0 10px;
+}
+
+.modal-content p {
+    margin-bottom: 15px;
+}
+
+.modal-content strong {
+    color: var(--secondary-color);
+}
+
+.testimoni-section {
+    background-color: var(--light-green);
+    padding: 50px 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin: 50px 0;
+    text-align: center;
+}
+
+.testimoni-title {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 40px;
+    font-family: 'Pacifico', cursive;
+}
+
+.carousel {
+    position: relative;
+    overflow: visible; 
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.carousel-track-container {
+    position: relative;
+    height: 350px; 
+    overflow: hidden;
+}
+
+.carousel-track {
+    position: relative;
+    height: 100%;
+    transition: transform 0.5s ease;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.carousel-nav {
+    display: flex;
+    margin-top: 1rem;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-nav button {
+    width: 16px;
+    height: 16px;
+    border-radius: 25px;
+    border: 2px solid black; 
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-nav button.current-slide {
+    background-color: black;
+}
+
+.testimoni-item {
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: auto;
+    min-height: 200px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimoni-foto {
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid var(--primary-color);
+}
+
+.testimoni-video {
+    width: 900%;
+    height: 100%;
+    max-width: 400px;
+    height: auto; 
+    max-height: 225px; 
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.testimoni-item p {
+    font-style: italic;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 1.3rem;
+}
+
+.testimoni-item h4 {
+    color: var(--secondary-color);
+    margin: 0;
+}
+
+.carousel-slide .testimoni-item:has(video) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.testimoni-video::-webkit-media-controls-play-button {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+.is-hidden {
+    display: none;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--primary-color);
+    border: none;
+    color: rgb(0, 0, 0);
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-button.left {
+    left: -20px;
+}
+
+.carousel-button.right {
+    right: -20px;
+}
+
+.carousel-button:hover {
+    background: var(--secondary-color);
+}
+
+
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+    }
+    
+    .blog-title h1 {
+        font-size: 2.5rem;
+    }
+    
+    .feature-title {
+        font-size: 1.6rem;
+    }
+    
+    .blog-intro {
+        padding: 20px;
+        font-size: 1.1rem;
+    }
+    
+    .modal-container {
+        padding: 20px;
+    }
+    
+    .modal-title {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        max-width: 95%;
+        overflow: visible;
+    }
+
+    .carousel-track-container {
+        min-height: 400px; /* kurangin dari desktop */
+        padding: 20px 0;
+    }
+
+    .testimoni-item {
+        padding: 30px;
+        min-height: auto; /* hapus min-height fix di HP */
+    }
+
+    .testimoni-foto {
+        width: 80px; /* kecilin foto */
+        height: 80px;
+        margin-bottom: 15px;
+    }
+
+    .testimoni-item p {
+        font-size: 1rem; /* kecilin tulisan */
+        line-height: 1.5;
+    }
+
+    .testimoni-item h4 {
+        font-size: 1rem; /* kecilin nama */
+    }
+
+    .carousel-button {
+        width: 35px; /* kecilin tombol panah */
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .carousel-button.left {
+        left: -15px; /* rapetin tombol kiri */
+    }
+
+    .carousel-button.right {
+        right: -15px; /* rapetin tombol kanan */
+    }
+}
+
+@media (max-width: 768px) {
+    .testimoni-video {
+        width: 100%;
+        max-width: 250px; /* atau 300px kalau mau lebih besar */
+        height: auto;
+        max-height: 200px; /* supaya videonya gak terlalu tinggi */
+        border-radius: 10px;
+        margin-bottom: 15px;
+        object-fit: cover;
+    }
+}
