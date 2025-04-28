@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function calculateTotalServings() {
         let total = 0;
         quantityInputs.forEach(input => {
-            total += parseInt(input.value);
+            total += input.value ? parseInt(input.value) : 0;
         });
         return total;
     }

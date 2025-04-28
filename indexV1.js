@@ -1,8 +1,14 @@
+const nav = document.querySelector('nav') 
+
 // Simple mobile menu toggle
 document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-    document.querySelector('nav').classList.toggle('active');
+    nav.classList.toggle('active');
     this.classList.toggle('active');
 });
+
+nav.querySelectorAll("ul li a").forEach(navLink => {
+    navLink.addEventListener('click', () => nav.classList.toggle("active"))
+})
 
 document.querySelector('.contact-form form').addEventListener('submit', function(event) {
     event.preventDefault(); // Mencegah form submit biasa
