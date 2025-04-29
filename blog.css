@@ -284,6 +284,12 @@
     background-color: black;
 }
 
+.ultah {
+    width: auto; 
+    border-radius: var(--border-radius); 
+    margin: 20px 0;
+}
+
 .testimoni-item {
     background: white;
     padding-left: 40px;
