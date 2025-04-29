@@ -1,10 +1,8 @@
-// Simple mobile menu toggle
 document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
     document.querySelector('nav').classList.toggle('active');
     this.classList.toggle('active');
 });
 
-// pop up functionality
 const modal = document.getElementById('articleModal');
 const openModalBtn = document.getElementById('openArticleModal');
 const closeModalBtn = document.getElementById('closeArticleModal');
@@ -18,7 +16,7 @@ openModalBtn.addEventListener('click', function() {
 // Tutup pop up
 closeModalBtn.addEventListener('click', function() {
     modal.classList.remove('active');
-    document.body.style.overflow = 'auto'; // Re-enable scrolling
+    document.body.style.overflow = 'auto';
 });
 
 // Tutup pop up saat klik diluar box

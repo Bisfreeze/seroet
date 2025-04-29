@@ -1,6 +1,4 @@
 const nav = document.querySelector('nav') 
-
-// Simple mobile menu toggle
 document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
     nav.classList.toggle('active');
     this.classList.toggle('active');

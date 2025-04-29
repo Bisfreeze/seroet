@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle
     document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
         document.querySelector('nav').classList.toggle('active');
         this.classList.toggle('active');
     });
     
-    // Variables
     const packageCards = document.querySelectorAll('.package-card');
     const quantityInputs = document.querySelectorAll('.quantity-input');
     const increaseButtons = document.querySelectorAll('.increase');
@@ -26,37 +24,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Package selection
     packageCards.forEach(card => {
-        card.addEventListener('click', function() {
-            // Remove selected class from all cards
+        card.addEventListener('click', function() {s
             packageCards.forEach(c => c.classList.remove('selected'));
             
-            // Add selected class to clicked card
             this.classList.add('selected');
             
-            // Update selected package info
             selectedPackage = this.dataset.package;
             maxServings = parseInt(this.dataset.servings);
             const packagePrice = this.dataset.price;
             
-            // Update hidden fields
             document.getElementById('selectedPackage').value = selectedPackage;
             document.getElementById('totalServings').value = maxServings;
             document.getElementById('packagePrice').value = packagePrice;
             
-            // Reset all quantity inputs
             quantityInputs.forEach(input => {
                 input.value = 0;
             });
             
-            // Update counter
             updateServingsCounter();
             
-            // Enable flavor selection
             enableFlavorSelection();
         });
     });
     
-    // Increase quantity
     increaseButtons.forEach(button => {
         button.addEventListener('click', function() {
             if (!selectedPackage) {
@@ -75,7 +65,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Decrease quantity
     decreaseButtons.forEach(button => {
         button.addEventListener('click', function() {
             const input = this.parentElement.querySelector('.quantity-input');
@@ -88,7 +77,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Calculate total servings
     function calculateTotalServings() {
         let total = 0;
         quantityInputs.forEach(input => {
@@ -96,8 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         return total;
     }
-    
-    // Update servings counter
+
     function updateServingsCounter() {
         if (!selectedPackage) {
             servingsCounter.textContent = 'Please select a package first';
@@ -124,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Enable flavor selection
+    // pilih rasa
     function enableFlavorSelection() {
         quantityInputs.forEach(input => {
             input.readOnly = false;
@@ -145,13 +132,9 @@ document.addEventListener('DOMContentLoaded', function() {
             alert(`Please select exactly ${maxServings} servings in total`);
             return;
         }
-        
-        // Here you would normally submit the form to your server
-        // For now, we'll just show a success message
+
         alert('Thank you for your order! We will contact you shortly to confirm the details.');
         
-        // Optionally redirect back to home page
-        // window.location.href = 'indexV1.html';
     });
 });
 
@@ -169,13 +152,11 @@ document.getElementById('eventBookingForm').addEventListener('submit', function(
     const packagePrice = document.getElementById('packagePrice').value;
     const specialRequests = document.getElementById('specialRequests').value;
 
-    // Ambil jumlah masing-masing flavor
     const flavorKleps = document.querySelector('input[name="flavor_kleps"]').value;
     const flavorMarkisa = document.querySelector('input[name="flavor_markisa"]').value;
     const flavorDelims = document.querySelector('input[name="flavor_delims"]').value;
     const flavorMilo = document.querySelector('input[name="flavor_milo"]').value;
 
-    // Format pesan WhatsApp
     const message = `
 Halo Seroet! 😁
 
