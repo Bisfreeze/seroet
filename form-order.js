@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Package selection
     packageCards.forEach(card => {
-        card.addEventListener('click', function() {s
+        card.addEventListener('click', function() {
             packageCards.forEach(c => c.classList.remove('selected'));
             
             this.classList.add('selected');
