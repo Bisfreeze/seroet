@@ -187,7 +187,7 @@ Terima kasih! 🎉
 
     const encodedMessage = encodeURIComponent(message);
 
-    const whatsappNumber = "6281818220405";
+    const whatsappNumber = "6285121158800";
 
     // window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, "_blank");
     window.open(`https://api.whatsapp.com/send/?phone=${whatsappNumber}&text=${encodedMessage}&type=phone_number&app_absent=0`, "_blank");

@@ -21,7 +21,7 @@ document.querySelector('.contact-form form').addEventListener('submit', function
         return; // Stop proses kalo ada yang kosong
     }
 
-    const phoneNumber = '6281818220405'; 
+    const phoneNumber = '6285121158800'; 
     const whatsappMessage = `Halo Seroet!%0A%0ASaya ingin bertanya.%0A%0A* Nama: ${name}%0A* Email: ${email}%0A* Pesan: ${message}%0A%0ATerima kasih!`;
 
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
